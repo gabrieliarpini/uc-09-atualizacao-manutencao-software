@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patas Felizes Pet Shop</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
-<body class="font-nunito bg-white text-gray-900">
+<body class="font-nunito bg-white text-gray-900 text-base md:text-lg lg:text-xl">
 
   <!-- ===================== HEADER / NAV ===================== -->
   <header class="bg-yellow-400 shadow-md sticky top-0 z-50">
@@ -21,7 +21,7 @@
         <span class="text-2xl font-extrabold text-white drop-shadow">Patas Felizes</span>
       </div>
       <nav>
-        <ul class="flex gap-6 text-white font-semibold text-sm">
+        <ul class="flex flex-wrap gap-4 text-white font-semibold text-sm justify-center md:justify-end">
           <li><a href="#sobre" class="hover:underline">Sobre</a></li>
           <li><a href="#servicos" class="hover:underline">Serviços</a></li>
           <li><a href="#depoimentos" class="hover:underline">Depoimentos</a></li>
@@ -36,10 +36,10 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
       <div class="flex-1 text-center md:text-left">
         <div class="banner">
-          <img src="assets/img/BANNER.png" alt="banner da empresa">
+          <img src="assets/img/BANNER.png" alt="banner da empresa" class="w-full h-auto rounded-xl">
         </div>
         <a href="#contato"
-          class="bg-yellow-300 text-yellow-100 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition">
+          class="bg-yellow-300 text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition">
           Agende sua Visita
         </a>
       </div>
@@ -50,13 +50,13 @@
   <section id="sobre" class="py-20 px-4 bg-white">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-extrabold text-yellow-500 mb-6">Quem Somos</h2>
-      <p class="text-gray-1000 text-lg leading-relaxed">
+      <p class="text-gray-700 text-lg leading-relaxed">
         O Pet Shop Patas Felizes nasceu em 2010 com a missão de oferecer cuidado completo e humanizado
         para animais de estimação. Nossa equipe é formada por veterinários, tosadores e adestradores
         apaixonados pelo que fazem.
 
       </p>
-      <p class="text-gray-1000 text-lg leading-relaxed mt-4 text-black">
+      <p class="text-gray-700 text-lg leading-relaxed mt-4 text-black">
         Acreditamos que cada pet tem uma personalidade única, e por isso oferecemos atendimento
         personalizado para cada bichinho. Venha nos visitar! Estamos abertos de segunda a sábado,
 
@@ -82,21 +82,21 @@
 
         <div class="bg-yellow-50 rounded-2xl p-6 shadow">
           <img src="assets/img/cliente1.avif" alt="Foto de Ana Lima" class="w-14 h-14 rounded-full mb-4 object-cover" />
-          <p class="text-gray-300 italic mb-4">"Melhor pet shop da cidade! Minha cachorra adora vir aqui."</p>
+          <p class="text-gray-700 italic mb-4">"Melhor pet shop da cidade! Minha cachorra adora vir aqui."</p>
           <span class="font-bold text-yellow-600">Ana Lima</span>
         </div>
 
         <div class="bg-yellow-50 rounded-2xl p-6 shadow">
           <img src="assets/img/cliente2.avif" alt="Foto de Carlos Souza"
             class="w-14 h-14 rounded-full mb-4 object-cover" />
-          <p class="text-gray-300 italic mb-4">"Atendimento incrível. O gato ficou lindo após a tosa!"</p>
+          <p class="text-gray-700 italic mb-4">"Atendimento incrível. O gato ficou lindo após a tosa!"</p>
           <span class="font-bold text-yellow-600">Carlos Souza</span>
         </div>
 
         <div class="bg-yellow-50 rounded-2xl p-6 shadow">
           <img src="assets/img/cliente3.jpg" alt="Foto de Júlia Martins"
             class="w-14 h-14 rounded-full mb-4 object-cover" />
-          <p class="text-gray-300 italic mb-4">"O hotel para pets é excelente. Viajei tranquila sabendo que meu bichinho
+          <p class="text-gray-700 italic mb-4">"O hotel para pets é excelente. Viajei tranquila sabendo que meu bichinho
             estava bem cuidado."</p>
           <span class="font-bold text-yellow-600">Júlia Martins</span>
         </div>
