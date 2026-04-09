@@ -41,6 +41,8 @@ html {
   animation: fadeInUp 0.8s ease both;
 }
 
+
+
 /* Estilo para cards de serviço (que NÃO foram implementados no HTML) */
 /* BUG/FEATURE: este CSS existe mas os cards não foram adicionados ao HTML */
 .service-card {
