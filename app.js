@@ -1,32 +1,50 @@
-// =====================
-// VALIDAÇÃO DO FORMULÁRIO
-// =====================
 document.addEventListener('DOMContentLoaded', function () {
 
-  const form = document.getElementById('formContato'); // ✔ corrigido
+  // =====================
+  // FORMULÁRIO + AGENDAMENTO (WHATSAPP)
+  // =====================
+  const form = document.getElementById('formContato');
 
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       const nome = document.getElementById('nome').value.trim();
-      const email = document.getElementById('e-mail').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const servico = document.getElementById('servico').value;
+      const data = document.getElementById('data').value;
+      const hora = document.getElementById('hora').value;
       const mensagem = document.getElementById('mensagem').value.trim();
 
-      // ✔ validação básica
-      if (!nome || !email || !mensagem) {
-        alert('Por favor, preencha todos os campos!');
+      // ✅ validação
+      if (!nome || !email || !servico || !data || !hora) {
+        alert('Preencha todos os campos!');
         return;
       }
 
-      // ✔ validação de email correta
+      // ✅ validação de email
       const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailValido.test(email)) {
         alert('Digite um e-mail válido!');
         return;
       }
 
-      alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+      // ✅ mensagem para WhatsApp
+      const texto = `Olá! Quero agendar um atendimento:
+
+🐾 Serviço: ${servico}
+📅 Data: ${data}
+⏰ Horário: ${hora}
+
+👤 Nome: ${nome}
+📧 Email: ${email}
+💬 Mensagem: ${mensagem}`;
+
+      const numero = "55483232-4545"; 
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, '_blank');
+
       form.reset();
     });
   }
@@ -36,7 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // =====================
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('nav a');
-  const headerHeight = document.querySelector('header').offsetHeight;
+  const header = document.querySelector('header');
+
+  const headerHeight = header ? header.offsetHeight : 0;
 
   window.addEventListener('scroll', function () {
     let current = '';
@@ -50,10 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('text-black'); // remove estilo antigo
+      link.classList.remove('underline');
 
       if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('text-black'); // destaque
+        link.classList.add('underline');
       }
     });
   });
